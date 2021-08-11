@@ -1,0 +1,26 @@
+{
+  "name": "support_web_ticketing",
+  "version": "1.0.0",
+  "description": "Installation framework :",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    
+    "watch": "node ./support_backend/server.js",
+    "client": "npm start ./support_frontend",
+    "dev": "\"cd support_backend & node server.js\" \"npm start client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justludo974/support_web_ticketing.git"
+  },
+  "author": "ludovic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justludo974/support_web_ticketing/issues"
+  },
+  "homepage": "https://github.com/justludo974/support_web_ticketing#readme",
+  "dependencies": {
+    "node": "^16.6.1"
+  }
+}
