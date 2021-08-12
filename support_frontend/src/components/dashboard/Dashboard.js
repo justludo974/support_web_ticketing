@@ -5,7 +5,7 @@ import { logoutUser } from "../../actions/authActions";
 import CreateTicket from "../ticket/create-ticket.component";
 import EditTicket from "../ticket/edit-ticket.component";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import TicketList from "../ticket/ticket-list.component"
 
 
 class Dashboard extends Component {

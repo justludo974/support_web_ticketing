@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
 // Project Model
-const Ticket = require('../models/ticket.model');
+const Ticket = require('C:/Users/tiido/OneDrive/Bureau/support_web_ticketing/support_backend/models/ticket.model.js');
 
 // index (get all tickets)
 router.route('/').get((req, res) => {
@@ -27,7 +27,7 @@ router.route('/create').post((req, res) => {
     });
 
     newTicket.save()
-     	.then(() => res.json('Ticket successfully created.'))
+     	.then(() => res.json('Votre Ticket à été envoyé'))
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
