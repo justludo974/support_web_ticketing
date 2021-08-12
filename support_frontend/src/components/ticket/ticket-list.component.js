@@ -11,6 +11,35 @@ export default class TicketList extends Component {
 		this.state = { tickets: [] };
 	}
 
+    componentDidMount() {
+        axios.get('http://localhost:5000/tickets/')
+            .then(res => {
+                this.setState({ tickets: res.data })
+            })
+            .catch(error => console.log(error));
+    }
+
+    deleteTicket(id) {
+	    axios.delete('http://localhost:5000/tickets/'+id)
+	        .then(res => { console.log(res.data)});
+
+	    // update tickets array to all tickets without matching id
+	    this.setState({
+	        tickets: this.state.tickets.filter(el => el._id !== id)
+	    })
+	}
+
+	getOpenList() {
+        return this.state.tickets.map(currentTicket => {
+            if(currentTicket.status !== 'Resolved') 
+                return <Ticket 
+            			ticket={currentTicket} 
+            			deleteTicket={this.deleteTicket}
+                        key={currentTicket._id}
+                        />;
+        })
+	}
+
     getResolvedList() {
         return this.state.tickets.map(currentTicket => {
             if(currentTicket.status === 'Resolved') 

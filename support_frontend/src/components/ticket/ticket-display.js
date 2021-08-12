@@ -5,11 +5,11 @@ import MarkButton from './mark-button';
 
 let getPriorities = (lvl) => {
     switch(lvl) {
-        case 'Low': 
+        case 'Basse': 
             return <td className="low-priority">{lvl}</td>;
-        case 'Medium':
+        case 'Moyenne':
             return <td className="med-priority">{lvl}</td>;
-        case 'High': 
+        case 'Haute': 
             return <td className="high-priority">{lvl}</td>;
         default:
             return <td>{lvl}</td>;
@@ -23,6 +23,20 @@ export default class Ticket extends Component {
         this.state = {
             status: ''
         }
+    }
+    componentDidMount() {
+        // default state of ticket
+        axios.get('http://localhost:5000/tickets/'+this.props.ticket._id)
+            .then(res => {
+                this.setState({
+                    title: res.data.title,
+                    description: res.data.description,
+                    priority: res.data.priority,
+                    status: res.data.status,
+                    type: res.data.type
+                })
+            })
+            .catch(error => console.log(error));
     }
 
 

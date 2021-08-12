@@ -12,8 +12,6 @@ export default class CreateTicket extends Component {
 
         this.onChangeTitle = this.onChangeTitle.bind(this);
         this.onChangeDescription = this.onChangeDescription.bind(this);
-        this.onChangeProjectName = this.onChangeProjectName.bind(this);
-        this.onChangeAssignee = this.onChangeAssignee.bind(this);
         this.onChangePriority = this.onChangePriority.bind(this);
         this.onChangeStatus = this.onChangeStatus.bind(this);
         this.onChangeType = this.onChangeType.bind(this);
@@ -22,8 +20,6 @@ export default class CreateTicket extends Component {
         this.state = { 
       		title: '',
   		    description: '',
-  		    projectName: '',
-          assignee: '',
   		    priority: '',
   		    status: '',
   		    type: '',
@@ -41,18 +37,6 @@ export default class CreateTicket extends Component {
     onChangeDescription(e) {
         this.setState({
             description: e.target.value
-        })
-    }
-
-    onChangeProjectName(e) {
-        this.setState({
-            projectName: e.target.value
-        })
-    }
-
-    onChangeAssignee(e) {
-        this.setState({
-            assignee: e.target.value
         })
     }
 
@@ -80,8 +64,6 @@ export default class CreateTicket extends Component {
         const ticket = {
             title: this.state.title,
             description: this.state.description,
-            projectName: this.state.projectName,
-            assignee: this.state.assignee,
             priority: this.state.priority,
             status: this.state.status,
             type: this.state.type
@@ -90,7 +72,7 @@ export default class CreateTicket extends Component {
         axios.post('http://localhost:5000/tickets/create', ticket)
             .then(res => console.log(res.data))
 
-        alert('Successfully created.');
+        alert('Votre ticket a été envoyé');
 
         // clear form
         this.setState({ 

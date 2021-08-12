@@ -3,9 +3,10 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import CreateTicket from "../ticket/create-ticket.component";
-import EditTicket from "../ticket/edit-ticket.component";
+//import EditTicket from "../ticket/edit-ticket.component";
 import "bootstrap/dist/css/bootstrap.min.css";
-import TicketList from "../ticket/ticket-list.component"
+//import TicketList from "../ticket/ticket-list.component"
+
 
 
 class Dashboard extends Component {
@@ -27,7 +28,7 @@ return (
             </h4> 
             <div>
             </div>
-            <CreateTicket/>
+            <CreateTicket/>     
             <button
               style={{
                 textAlign: "center",                 
