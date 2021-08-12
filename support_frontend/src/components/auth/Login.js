@@ -67,8 +67,9 @@ return (
                   type="email"
                   className={classnames("", {
                     invalid: errors.email || errors.emailnotfound
-                  })}
+                  })}                  
                 />
+                {"\n"}              
                 <label htmlFor="email">Adresse mail</label>
                 <span className="red-text">
                   {errors.email}
