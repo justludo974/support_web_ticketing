@@ -9,3 +9,10 @@ Framework utilisés:
 - Redux : Pour la gestion d'état.
 - redux-thunk : middleware pour redux permet en simplifiant de dispatcher une action sans ou avec une condition
 - axios : permet de faire des appel HTTP par un API 
+
+
+Site backend :
+node server.js (pour lancer le serveur)
+
+Site frontend : 
+npm start 
