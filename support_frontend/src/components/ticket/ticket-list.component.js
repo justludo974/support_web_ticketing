@@ -55,13 +55,13 @@ export default class TicketList extends Component {
 		return(
 			<div>
                 <br></br>
-				<h3>Open Tickets</h3>
+				<h3>Ticket Ouvert</h3>
                     <table className="table">
                         <thead className="thead-light">
                         <tr>
-                            <th>Title</th>
+                            <th>Titre</th>
                             <th>Description</th>
-                            <th>Priority</th>
+                            <th>Priorité</th>
                             <th>Status</th>
                             <th>Type</th>
                             <th>Actions</th>
@@ -72,15 +72,13 @@ export default class TicketList extends Component {
                         </tbody>
                     </table>
                 <br></br>
-                <h3>Resolved Tickets</h3>
+                <h3>Ticket Résolu</h3>
                     <table className="table">
                         <thead className="thead-light">
                         <tr>
-                            <th>Title</th>
+                            <th>Titre</th>
                             <th>Description</th>
-                            <th>Project</th>
-                            <th>Assigned To</th>
-                            <th>Priority</th>
+                            <th>Priorité</th>
                             <th>Status</th>
                             <th>Type</th>
                             <th>Actions</th>

@@ -49,13 +49,13 @@ export default class Ticket extends Component {
                 <td>{this.props.ticket.status}</td>
                 <td>{this.props.ticket.type}</td>
                 <td>
-                    <Link to={"/edit/"+this.props.ticket._id} className="badge badge-info">Edit</Link>
+                    <Link to={"/edit/"+this.props.ticket._id} className="badge badge-info">Modifié</Link>
                     <br></br>
                     <a href="#" onClick={() => { 
-                        if(window.confirm('Are you sure you want to delete this ticket?')) 
+                        if(window.confirm('Voulez vous vraiment supprimer le ticket?')) 
                             this.props.deleteTicket(this.props.ticket._id) 
                     }} 
-                    className="badge badge-danger">Delete</a>
+                    className="badge badge-danger">Supprimer</a>
                     <br></br>
                     
                     <MarkButton 

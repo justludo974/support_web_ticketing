@@ -8,7 +8,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 //import TicketList from "../ticket/ticket-list.component"
 
 
-
 class Dashboard extends Component {
   onLogoutClick = e => {
     e.preventDefault();
@@ -28,7 +27,7 @@ return (
             </h4> 
             <div>
             </div>
-            <CreateTicket/>     
+            <CreateTicket/> 
             <button
               style={{
                 textAlign: "center",                 
